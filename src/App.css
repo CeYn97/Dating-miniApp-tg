@@ -21,7 +21,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow-y: hidden;
 }
 
 .app-container {
@@ -30,6 +29,8 @@ body {
   height: 100vh;
   overflow-y: hidden;
   max-width: 375px;
+  min-height: 100vh;
+  background-color: inherit;
 }
 
 .logo {
