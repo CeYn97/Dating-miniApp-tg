@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Lighthaus";
+  src: url("./assets/fonts/ofont.ru_Lighthaus.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  margin-top: 163px;
+  text-align: center;
+  width: 100%;
+  max-width: 375px;
+}
+
+.logo {
+  width: 117.65px;
+  height: 69px;
+  margin-bottom: 45px;
+}
+
+.title {
+  font-family: "Lighthaus", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.first-line {
+  display: block;
+}
+
+.linePosition {
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    #b8860b 0%,
+    #ffd700 25%,
+    #b8860b 50%,
+    #dcb900 75%,
+    #b8860b 100%
+  );
+  margin: 0 0 16px 0;
+}
+
+.author {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 211px;
+  line-height: 16.94px;
+}
+
+.start-button {
+  display: flex;
+  justify-content: center;
+  width: 361px;
+  padding: 18px 0;
+  background: none;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid yellow;
+  border-radius: 16px;
+  gap: 10px;
+}
