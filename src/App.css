@@ -21,15 +21,16 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  max-height: 625px;
 }
 
 .app-container {
   margin-top: 163px;
   text-align: center;
   height: 100vh;
-  overflow-y: hidden;
   max-width: 375px;
   min-height: 100vh;
+  max-height: 625px;
   background-color: inherit;
 }
 
@@ -86,7 +87,7 @@ body {
   width: 361px;
   padding: 18px 0;
   background: none;
-  color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
