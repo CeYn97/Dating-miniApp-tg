@@ -1,20 +1,3 @@
-// import './App.css'
-// import {BrowserRoute as Router} from "react-router-dom"
-
-// function App() {
-
-//   return (
-//     <>
-//       <Router>
-//         <div className="app">
-
-//         </div>
-//       </Router>
-//     </>
-//   )
-// }
-
-// export default App
 import './App.css';
 import './gardevoir.css'
 import './minireset.css'
