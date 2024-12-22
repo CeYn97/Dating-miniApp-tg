@@ -40,6 +40,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -90,8 +91,10 @@ body {
 }
 
 .start-button {
-  display: flex;
-  justify-content: center;
+  position: fixed; /* Фиксируем кнопку относительно окна */
+  bottom: 60px; /* Отступ снизу */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Смещаем на половину ширины кнопки */
   width: 361px;
   padding: 18px 0;
   background: none;
@@ -101,6 +104,4 @@ body {
   font-weight: 500;
   border: 2px solid yellow;
   border-radius: 16px;
-  margin-top: auto;
-  margin-bottom: 20px;
 }
