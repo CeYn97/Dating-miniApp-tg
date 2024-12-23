@@ -27,7 +27,10 @@ const Home: React.FC = () => {
           className="logo-image"
         />
       </div>
-      <h1 className="title">ВОПРОСЫ ДЛЯ СВИДАНИЙ</h1>
+      <h1 className="title">
+        <span className="title-line">ВОПРОСЫ</span>
+        <span className="title-line">ДЛЯ СВИДАНИЙ</span>
+      </h1>
       <p className="author">by Настя Рыбка</p>
       <button className="start-button" onClick={() => navigate("/chats")}>Начать</button>
     </div>

@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Lighthaus";
+  src: url("../assets/fonts/ofont.ru_Lighthaus.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   background-color: #000;
@@ -11,44 +25,63 @@ body {
   align-items: center;
   height: 100vh;
   text-align: center;
-  position: relative; /* Установить относительно родителя */
+  position: relative;
 }
 
 .logo-image {
-  width: 80px; /* Подстройте размер под нужный */
+  width: 117px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
 .title {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 10px 0;
+  font-family: "Lighthaus", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 46.4px;
+  margin-bottom: 16px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+      90deg,
+      #b8860b 0%,
+      #ffd700 25%,
+      #b8860b 50%,
+      #dcb900 75%,
+      #b8860b 100%
+    )
+    1;
+  padding-bottom: 11px;
+}
+
+.title-line {
+  margin: 0;
 }
 
 .author {
-  font-size: 16px;
-  color: #aaa;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 16.94px;
+  color: #ffffff;
   margin-bottom: 30px;
 }
 
 .start-button {
-  position: absolute; /* Абсолютное позиционирование */
-  bottom: 20px; /* Отступ от низа */
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: 90%;
+  position: absolute;
+  bottom: 20px;
   background-color: transparent;
   border: 1px solid #f5a623;
   color: #f5a623;
-  border-radius: 25px;
-  padding: 10px 30px;
-  font-size: 18px;
-  font-weight: bold;
+  border-radius: 16px;
+  padding: 18px 0;
   cursor: pointer;
   outline: none;
   transition: background-color 0.3s, color 0.3s;
-}
-
-.start-button:hover {
-  background-color: #f5a623;
-  color: #000;
 }
