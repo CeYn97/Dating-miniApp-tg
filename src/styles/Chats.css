@@ -75,10 +75,11 @@ body {
 }
 
 .plus {
-  font-size: 14px; /* Размер шрифта для символа + */
-  line-height: 1; /* Убираем лишние отступы */
-  line-height: 24px; /* Устанавливаем line-height, равный высоте кнопки */
-  transform: translateY(-1px); /* Поднимем символ, если нужно */
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  line-height: 24px;
+  transform: translateY(-1px);
 }
 
 .chatList {
