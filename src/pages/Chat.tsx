@@ -5,9 +5,9 @@ import searchIcon from "../assets/SearchIcon.svg";
 import firstAvatar from "../assets/Avatar1.svg";
 import secondAvatar from "../assets/Avatar2.svg";
 import thridAvatar from "../assets/Avatat3.svg";
-import chatsIcon from "../assets/ChatsIcon.svg"
-import buySubscribeIcon from "../assets/buySubscribe.svg"
-import ProfileIcon from "../assets/ProfileIcon.svg"
+import chatsIcon from "../assets/ChatsIcon.svg";
+import buySubscribeIcon from "../assets/buySubscribe.svg";
+import ProfileIcon from "../assets/ProfileIcon.svg";
 
 const chats = [
   {
@@ -38,7 +38,9 @@ const ChatListScreen: React.FC = () => {
           <img src={searchIcon} alt="search-icon" className="searchIcon" />
           <input type="text" placeholder="Поиск" className="searchBar" />
         </div>
-        <span className="addButton">+</span>
+        <div className="addButton">
+          <span className="plus">+</span>
+        </div>
       </header>
 
       <main className="chatList">
@@ -62,15 +64,19 @@ const ChatListScreen: React.FC = () => {
 
       <nav className="bottomNavigation">
         <div className="navItem">
-          <img src={chatsIcon} alt="chatsIcon" className="navIcon"/>
+          <img src={chatsIcon} alt="chatsIcon" className="navIcon" />
           <a className="navLabel">Диалоги</a>
         </div>
         <div className="navItem">
-           <img src={buySubscribeIcon} alt="buySubscribeIcon" className="navIcon"/>
+          <img
+            src={buySubscribeIcon}
+            alt="buySubscribeIcon"
+            className="navIcon"
+          />
           <a className="navLabel">Подписка</a>
         </div>
         <div className="navItem">
-          <img src={ProfileIcon} alt="ProfileIcon" className="navIcon"/>
+          <img src={ProfileIcon} alt="ProfileIcon" className="navIcon" />
           <a className="navLabel">Профиль</a>
         </div>
       </nav>
