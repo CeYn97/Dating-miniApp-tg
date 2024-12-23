@@ -1,93 +1,81 @@
-// import '../styles/Chats.css';
-// import '../styles/gardevoir.css'
-// import '../styles/minireset.css'
+import React from "react";
+import "../styles/Chats.css";
+import "../styles/reset.css";
+import searchIcon from "../assets/SearchIcon.svg";
+import firstAvatar from "../assets/firstAvatar.png";
+import secondAvatar from "../assets/secondAvatar.png";
+import thridAvatar from "../assets/thridAvatar.png";
+import chatsIcon from "../assets/ChatsIcon.svg"
+import buySubscribeIcon from "../assets/buySubscribe.svg"
+import ProfileIcon from "../assets/ProfileIcon.svg"
 
+const chats = [
+  {
+    name: "Сергей",
+    lastMessage: "Мне нравится, когда ты говори...",
+    time: "13:50",
+    avatar: firstAvatar,
+  },
+  {
+    name: "Александр Петров",
+    lastMessage: "Если говорить честно, то я не ...",
+    time: "11:01",
+    avatar: secondAvatar,
+  },
+  {
+    name: "Артём Васильев",
+    lastMessage: "Какой областью своей жизни...",
+    time: "09:17",
+    avatar: thridAvatar,
+  },
+];
 
-// interface ChatItemProps {
-//   name: string;
-//   message: string;
-//   time: string;
-//   avatar: string;
-//   hasIcon?: boolean;
-// }
+const ChatListScreen: React.FC = () => {
+  return (
+    <div className="container">
+      <header className="searchBarContainer">
+        <div className="searchBarWrapper">
+          <img src={searchIcon} alt="search-icon" className="searchIcon" />
+          <input type="text" placeholder="Поиск" className="searchBar" />
+        </div>
+        <span className="addButton">+</span>
+      </header>
 
-// interface NavItemProps {
-//   label: string;
-//   icon: string;
-//   isActive?: boolean;
-// }
+      <main className="chatList">
+        {chats.map((chat, index) => (
+          <div key={index} className="chatItem">
+            <div className="avatar">
+              <img src={chat.avatar} alt={chat.name} className="avatarImage" />
+            </div>
+            <div className="chatDetails">
+              <p className="chatName">{chat.name}</p>
+              <p className="chatMessage">{chat.lastMessage}</p>
+            </div>
+            <p className="chatTime">{chat.time}</p>
+          </div>
+        ))}
+      </main>
 
-// function ChatScreen() {
-//   return (
-//     <div className="chat-screen">
-//       {/* Header */}
-//       <div className="chat-header">
-//         <input type="text" placeholder="Поиск" className="search-input" />
-//         <button className="add-button">+</button>
-//       </div>
+      <footer className="footer">
+        <button className="inviteButton">Пригласить нового игрока</button>
+      </footer>
 
-//       {/* Chat list */}
-//       <div className="chat-list">
-//         <ChatItem
-//           name="Сергей"
-//           message="Мне нравится, когда ты говори..."
-//           time="13:50"
-//           avatar="/path/to/sergey-avatar.png" // Add paths to avatars
-//         />
-//         <ChatItem
-//           name="Александр Петров"
-//           message="Если говорить честно, то я не ..."
-//           time="11:01"
-//           avatar="/path/to/alexander-avatar.png"
-//           hasIcon
-//         />
-//         <ChatItem
-//           name="Артём Васильев"
-//           message="Какой областью своей жизни..."
-//           time="09:17"
-//           avatar="/path/to/artem-avatar.png"
-//         />
-//       </div>
+      <nav className="bottomNavigation">
+        <div className="navItem">
+          <img src={chatsIcon} alt="chatsIcon" className="navIcon"/>
+          <a className="navLabel">Диалоги</a>
+        </div>
+        <div className="navItem">
+           <img src={buySubscribeIcon} alt="buySubscribeIcon" className="navIcon"/>
+          <a className="navLabel">Подписка</a>
+        </div>
+        <div className="navItem">
+          <img src={ProfileIcon} alt="ProfileIcon" className="navIcon"/>
+          <a className="navLabel">Профиль</a>
+        </div>
+      </nav>
+    </div>
+  );
+};
 
-//       {/* Invite button */}
-//       <button className="invite-button">Пригласить нового игрока</button>
-
-//       {/* Bottom navigation */}
-//       <div className="bottom-navigation">
-//         <NavItem label="Диалоги" icon="dialogs-icon" isActive />
-//         <NavItem label="Подписка" icon="subscription-icon" />
-//         <NavItem label="Профиль" icon="profile-icon" />
-//       </div>
-//     </div>
-//   );
-// }
-
-// function ChatItem({ name, message, time, avatar, hasIcon }: ChatItemProps) {
-//   return (
-//     <div className="chat-item">
-//       <img src={avatar} alt={name} className="avatar" />
-//       <div className="chat-details">
-//         <div className="chat-header">
-//           <span className="chat-name">{name}</span>
-//           <span className="chat-time">{time}</span>
-//         </div>
-//         <div className="chat-message">
-//           {message}
-//         </div>
-//       </div>
-//       {hasIcon && <div className="chat-icon">⚪</div>}
-//     </div>
-//   );
-// }
-
-// function NavItem({ label, icon, isActive }: NavItemProps) {
-//   return (
-//     <div className={`nav-item ${isActive ? 'active' : ''}`}>
-//       <div className={icon}></div>
-//       <span>{label}</span>
-//     </div>
-//   );
-// }
-
-// export default ChatScreen;
-
+export default ChatListScreen;
