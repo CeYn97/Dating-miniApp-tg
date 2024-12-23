@@ -64,17 +64,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
+  width: 24px; /* Измените по мере необходимости */
+  height: 24px; /* Измените по мере необходимости */
   border-radius: 50%;
   border: 1.5px solid white;
   background-color: transparent;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 14px; /* Подкорректируйте для лучшего соответствия */
   font-weight: bold;
-  line-height: 1;
   cursor: pointer;
   margin-left: 16px;
+  line-height: 1; /* Это гарантирует, что текст будет по центру */
 }
 
 .chatList {
