@@ -1,14 +1,3 @@
-// import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-// import '../styles/App.css';
-// import React from "react";
-// import "../styles/Chats.css";
-// import searchIcon from "../assets/SearchIcon.svg";
-// import firstAvatar from "../assets/firstAvatar.png";
-// import secondAvatar from "../assets/secondAvatar.png";
-// import thridAvatar from "../assets/thridAvatar.png";
-// import chatsIcon from "../assets/ChatsIcon.svg"
-// import buySubscribeIcon from "../assets/buySubscribe.svg"
-// import ProfileIcon from "../assets/ProfileIcon.svg"
 import React from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Chats from "./Chat";
