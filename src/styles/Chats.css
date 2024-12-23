@@ -11,40 +11,51 @@
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #1c1c1e;
+  margin-bottom: 30px;
 }
 
 .searchBarWrapper {
   display: flex;
   align-items: center;
   flex: 1;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 5px 10px;
+  background-color: #303030;
+  border-radius: 10px;
+  padding: 5px 9.91px 5px 11.89px;
 }
 
 .searchIcon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  width: 23.77px;
+  height: 23.77px;
+  margin-right: 9.91px;
 }
 
 .searchBar {
   flex: 1;
   border: none;
+  background-color: #303030;
+  color: rgba(255, 255, 255);
   outline: none;
   font-size: 16px;
 }
 
+.searchBar::placeholder {
+  color: #fff;
+  opacity: 50%;
+}
+
 .addButton {
-  width: 40px;
-  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  border: none;
-  background-color: #ffc107;
-  color: #000;
+  border: 1.5px solid white;
+  background-color: transparent;
+  color: #ffffff;
   font-size: 20px;
   cursor: pointer;
+  margin-left: 14px;
 }
 
 .chatList {
@@ -76,37 +87,35 @@
 }
 
 .chatName {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
   margin: 0;
 }
 
 .chatMessage {
-  font-size: 14px;
+  font-size: 15px;
   color: #aaa;
-  margin: 0;
+  margin: 4px 0 0 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .chatTime {
-  font-size: 12px;
+  font-size: 14px;
   color: #aaa;
 }
 
 .footer {
   padding: 10px;
-  background-color: #1c1c1e;
 }
 
 .inviteButton {
   width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #ffc107;
-  color: #000;
+  padding: 18px 0 18px 0;
+  border: 2px solid yellow;
+  color: rgb(255, 255, 255);
+  border-radius: 16px;
   font-size: 16px;
   cursor: pointer;
 }
