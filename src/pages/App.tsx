@@ -10,11 +10,14 @@
 // import buySubscribeIcon from "../assets/buySubscribe.svg"
 // import ProfileIcon from "../assets/ProfileIcon.svg"
 import React from "react";
-import '../styles/App.css'
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Chats from "./Chat";
+import "../styles/App.css";
 import "../styles/reset.css";
-import mainLogo from "../assets/mainLogo.svg"
+import mainLogo from "../assets/mainLogo.svg";
 
-const App: React.FC = () => {
+const Home: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="container">
       <div className="logo">
@@ -26,8 +29,17 @@ const App: React.FC = () => {
       </div>
       <h1 className="title">ВОПРОСЫ ДЛЯ СВИДАНИЙ</h1>
       <p className="author">by Настя Рыбка</p>
-      <button className="start-button">Начать</button>
+      <button className="start-button" onClick={() => navigate("/chats")}>Начать</button>
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/chats" element={<Chats />} />
+    </Routes>
   );
 };
 
