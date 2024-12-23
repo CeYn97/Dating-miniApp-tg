@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.chat-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Header */
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #222;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 23.77px;
+  height: 23.77px;
+  margin-left: 9.91px;
+  margin-right: 2px;
+}
+
+.search-input {
+  display: flex;
+  width: 323px;
+  height: 36px;
+  flex-grow: 1;
+  background: none;
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  gap: 11.89px;
+  padding: 5.94px 9.91px 5.94px 9.91px;
+}
+
+.search-input::placeholder {
+  width: 45px;
+  height: 18px;
+  opacity: 50%;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  line-height: 18.15px;
+  color: #fff;
+}
+
+.add-button {
+  margin-left: 14px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 1.5px solid white;
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Chat list */
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #333;
+}
+
+.chat-item .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.chat-details {
+  flex: 1;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-name {
+  font-weight: bold;
+}
+
+.chat-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.chat-message {
+  color: #ccc;
+}
+
+.chat-icon {
+  font-size: 18px;
+  color: #ffd700;
+}
+
+/* Invite button */
+.invite-button {
+  padding: 12px;
+  margin: 16px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Bottom navigation */
+.bottom-navigation {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #999;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  color: #ffd700;
+}
