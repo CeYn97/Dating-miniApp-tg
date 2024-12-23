@@ -2,9 +2,9 @@ import React from "react";
 import "../styles/Chats.css";
 import "../styles/reset.css";
 import searchIcon from "../assets/SearchIcon.svg";
-import firstAvatar from "../assets/firstAvatar.png";
-import secondAvatar from "../assets/secondAvatar.png";
-import thridAvatar from "../assets/thridAvatar.png";
+import firstAvatar from "../assets/Avatar1.svg";
+import secondAvatar from "../assets/Avatar2.svg";
+import thridAvatar from "../assets/Avatat3.svg";
 import chatsIcon from "../assets/ChatsIcon.svg"
 import buySubscribeIcon from "../assets/buySubscribe.svg"
 import ProfileIcon from "../assets/ProfileIcon.svg"
