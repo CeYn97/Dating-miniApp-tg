@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Chats.css";
 import "../styles/reset.css";
 import searchIcon from "../assets/SearchIcon.svg";
@@ -6,6 +7,7 @@ import firstAvatar from "../assets/Avatar1.svg";
 import secondAvatar from "../assets/Avatar2.svg";
 import thridAvatar from "../assets/Avatat3.svg";
 import chatsIcon from "../assets/ChatsIcon.svg";
+import someChatImage from "../assets/someChatIcon.svg";
 import buySubscribeIcon from "../assets/buySubscribe.svg";
 import ProfileIcon from "../assets/ProfileIcon.svg";
 
@@ -53,7 +55,10 @@ const ChatListScreen: React.FC = () => {
               <p className="chatName">{chat.name}</p>
               <p className="chatMessage">{chat.lastMessage}</p>
             </div>
-            <p className="chatTime">{chat.time}</p>
+            <div className="chatImageWrapper">
+              <p className="chatTime">{chat.time}</p>
+              <img src={someChatImage} alt="Chat" className="chatImage" />
+            </div>
           </div>
         ))}
       </main>
@@ -64,20 +69,32 @@ const ChatListScreen: React.FC = () => {
 
       <nav className="bottomNavigation">
         <div className="navItem">
-          <img src={chatsIcon} alt="chatsIcon" className="navIcon" />
-          <a className="navLabel">Диалоги</a>
+          <Link to="/chats" className="navLink">
+            <div className="navIconWrapper">
+              <img src={chatsIcon} alt="chatsIcon" className="navIcon" />
+            </div>
+            <p className="navLabel">Диалоги</p>
+          </Link>
         </div>
         <div className="navItem">
-          <img
-            src={buySubscribeIcon}
-            alt="buySubscribeIcon"
-            className="navIcon"
-          />
-          <a className="navLabel">Подписка</a>
+          <Link to="/profile" className="navLink">
+            <div className="navIconWrapper">
+              <img src={ProfileIcon} alt="ProfileIcon" className="navIcon" />
+            </div>
+            <p className="navLabel">Профиль</p>
+          </Link>
         </div>
         <div className="navItem">
-          <img src={ProfileIcon} alt="ProfileIcon" className="navIcon" />
-          <a className="navLabel">Профиль</a>
+          <Link to="/subscribe" className="navLink">
+            <div className="navIconWrapper">
+              <img
+                src={buySubscribeIcon}
+                alt="buySubscribeIcon"
+                className="navIcon"
+              />
+            </div>
+            <p className="navLabel">Подписка</p>
+          </Link>
         </div>
       </nav>
     </div>

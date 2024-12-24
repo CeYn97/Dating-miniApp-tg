@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Chats from "./Chat";
+import Profile from "./Profile";
+import Subscribe from "./Subscribe"; 
 import "../styles/App.css";
 import "../styles/reset.css";
 import mainLogo from "../assets/mainLogo.svg";
@@ -31,6 +33,8 @@ const App: React.FC = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/chats" element={<Chats />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/subscribe" element={<Subscribe />} />
     </Routes>
   );
 };

@@ -131,7 +131,22 @@ body {
 
 .chatTime {
   font-size: 14px;
+  margin-top: 5px;
   color: #aaa;
+}
+
+.chatImageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.chatImage {
+  width: 23px; /* Установите ширину изображения */
+  height: auto; /* Высота будет рассчитываться автоматически */
+  margin-top: 8px; /* Отступ сверху для лучшего выравнивания */
 }
 
 .footer {
@@ -175,10 +190,16 @@ body {
 
 .navItem {
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   color: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.navIconWrapper {
+  margin-bottom: 5px;
 }
 
 .navIcon {
@@ -190,4 +211,5 @@ body {
   margin-top: 2px;
   font-size: 15px;
   font-weight: 500;
+  color: #fff;
 }
