@@ -1,15 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/Chats.css";
 import "../styles/reset.css";
 import searchIcon from "../assets/SearchIcon.svg";
 import firstAvatar from "../assets/Avatar1.svg";
 import secondAvatar from "../assets/Avatar2.svg";
 import thridAvatar from "../assets/Avatat3.svg";
-import chatsIcon from "../assets/ChatsIcon.svg";
 import someChatImage from "../assets/someChatIcon.svg";
-import buySubscribeIcon from "../assets/buySubscribe.svg";
-import ProfileIcon from "../assets/ProfileIcon.svg";
+
 
 const chats = [
   {
@@ -63,40 +60,9 @@ const ChatListScreen: React.FC = () => {
         ))}
       </main>
 
-      <footer className="footer">
-        <button className="inviteButton">Пригласить нового игрока</button>
-      </footer>
-
-      <nav className="bottomNavigation">
-        <div className="navItem">
-          <Link to="/chats" className="navLink">
-            <div className="navIconWrapper">
-              <img src={chatsIcon} alt="chatsIcon" className="navIcon" />
-            </div>
-            <p className="navLabel">Диалоги</p>
-          </Link>
-        </div>
-        <div className="navItem">
-          <Link to="/profile" className="navLink">
-            <div className="navIconWrapper">
-              <img src={ProfileIcon} alt="ProfileIcon" className="navIcon" />
-            </div>
-            <p className="navLabel">Профиль</p>
-          </Link>
-        </div>
-        <div className="navItem">
-          <Link to="/subscribe" className="navLink">
-            <div className="navIconWrapper">
-              <img
-                src={buySubscribeIcon}
-                alt="buySubscribeIcon"
-                className="navIcon"
-              />
-            </div>
-            <p className="navLabel">Подписка</p>
-          </Link>
-        </div>
-      </nav>
+      <div className="footer">
+        <button className="inviteButton"><span className="inviteText">Пригласить нового игрока</span></button>
+      </div>
     </div>
   );
 };

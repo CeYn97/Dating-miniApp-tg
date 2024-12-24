@@ -6,6 +6,7 @@ import Subscribe from "./Subscribe";
 import "../styles/App.css";
 import "../styles/reset.css";
 import mainLogo from "../assets/mainLogo.svg";
+import TabBar from "../components/TabBar/TabBar";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -30,12 +31,15 @@ const Home: React.FC = () => {
 
 const App: React.FC = () => {
   return (
+    <>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/chats" element={<Chats />} />
-      <Route path="/profile" element={<Profile />} />
       <Route path="/subscribe" element={<Subscribe />} />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
+    <TabBar />
+    </>
   );
 };
 

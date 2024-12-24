@@ -85,7 +85,6 @@ body {
 .chatList {
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 150px;
   width: 90%;
 }
 
@@ -157,59 +156,48 @@ body {
   left: 0;
   width: 100%;
   padding: 10px;
-  border-bottom: 1px solid #333;
-  z-index: 10;
+  margin-bottom: 6.4%;
 }
 
 .inviteButton {
   width: calc(100% - 10px);
   margin: 0 auto;
   padding: 18px 0;
-  border: 2px solid #f5a623;
-  color: #f5a623;
   border-radius: 16px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+  position: relative;
 }
 
-.bottomNavigation {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #000;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 20px;
-  width: calc(100% - 20px);
-  margin: 0 10px;
-  border-radius: 12px;
-  font-size: 12px;
-  z-index: 5;
+.inviteButton .inviteText {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    rgba(184, 134, 11, 1) 0%,
+    rgba(255, 215, 0, 1) 25%,
+    rgba(184, 134, 11, 1) 50%,
+    rgba(220, 185, 0, 1) 75%,
+    rgba(184, 134, 11, 1) 100%
+  );
 }
 
-.navItem {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  color: #fff;
-  display: flex;
-}
-
-.navIconWrapper {
-  margin-bottom: 5px;
-}
-
-.navIcon {
-  width: 24px;
-  height: 24px;
-}
-
-.navLabel {
-  margin-top: 2px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #fff;
+.inviteButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 2px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(184, 134, 11, 1) 0%,
+    rgba(255, 215, 0, 1) 25%,
+    rgba(184, 134, 11, 1) 50%,
+    rgba(220, 185, 0, 1) 75%,
+    rgba(184, 134, 11, 1) 100%
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
 }
