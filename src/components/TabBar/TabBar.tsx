@@ -31,11 +31,11 @@ export default function TabBar() {
                   y2="3.71191"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0.03125" stop-color="#B8860B" />
-                  <stop offset="0.235169" stop-color="#FFD700" />
-                  <stop offset="0.505033" stop-color="#B8860B" />
-                  <stop offset="0.749821" stop-color="#DCB900" />
-                  <stop offset="1" stop-color="#B8860B" />
+                  <stop offset="0.03125" stopColor="#B8860B" />
+                  <stop offset="0.235169" stopColor="#FFD700" />
+                  <stop offset="0.505033" stopColor="#B8860B" />
+                  <stop offset="0.749821" stopColor="#DCB900" />
+                  <stop offset="1" stopColor="#B8860B" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_85_2572"
@@ -45,11 +45,11 @@ export default function TabBar() {
                   y2="11.313"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0.03125" stop-color="#B8860B" />
-                  <stop offset="0.235169" stop-color="#FFD700" />
-                  <stop offset="0.505033" stop-color="#B8860B" />
-                  <stop offset="0.749821" stop-color="#DCB900" />
-                  <stop offset="1" stop-color="#B8860B" />
+                  <stop offset="0.03125" stopColor="#B8860B" />
+                  <stop offset="0.235169" stopColor="#FFD700" />
+                  <stop offset="0.505033" stopColor="#B8860B" />
+                  <stop offset="0.749821" stopColor="#DCB900" />
+                  <stop offset="1" stopColor="#B8860B" />
                 </linearGradient>
               </defs>
             </svg>
@@ -84,11 +84,11 @@ export default function TabBar() {
                   y2="13.1489"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0.03125" stop-color="#B8860B" />
-                  <stop offset="0.235169" stop-color="#FFD700" />
-                  <stop offset="0.505033" stop-color="#B8860B" />
-                  <stop offset="0.749821" stop-color="#DCB900" />
-                  <stop offset="1" stop-color="#B8860B" />
+                  <stop offset="0.03125" stopColor="#B8860B" />
+                  <stop offset="0.235169" stopColor="#FFD700" />
+                  <stop offset="0.505033" stopColor="#B8860B" />
+                  <stop offset="0.749821" stopColor="#DCB900" />
+                  <stop offset="1" stopColor="#B8860B" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_140_351"
@@ -98,11 +98,11 @@ export default function TabBar() {
                   y2="3.52375"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0.03125" stop-color="#B8860B" />
-                  <stop offset="0.235169" stop-color="#FFD700" />
-                  <stop offset="0.505033" stop-color="#B8860B" />
-                  <stop offset="0.749821" stop-color="#DCB900" />
-                  <stop offset="1" stop-color="#B8860B" />
+                  <stop offset="0.03125" stopColor="#B8860B" />
+                  <stop offset="0.235169" stopColor="#FFD700" />
+                  <stop offset="0.505033" stopColor="#B8860B" />
+                  <stop offset="0.749821" stopColor="#DCB900" />
+                  <stop offset="1" stopColor="#B8860B" />
                 </linearGradient>
               </defs>
             </svg>
@@ -137,11 +137,11 @@ export default function TabBar() {
                   y2="3.07098"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0.03125" stop-color="#B8860B" />
-                  <stop offset="0.235169" stop-color="#FFD700" />
-                  <stop offset="0.505033" stop-color="#B8860B" />
-                  <stop offset="0.749821" stop-color="#DCB900" />
-                  <stop offset="1" stop-color="#B8860B" />
+                  <stop offset="0.03125" stopColor="#B8860B" />
+                  <stop offset="0.235169" stopColor="#FFD700" />
+                  <stop offset="0.505033" stopColor="#B8860B" />
+                  <stop offset="0.749821" stopColor="#DCB900" />
+                  <stop offset="1" stopColor="#B8860B" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_95_2862"
@@ -151,11 +151,11 @@ export default function TabBar() {
                   y2="13.9251"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0.03125" stop-color="#B8860B" />
-                  <stop offset="0.235169" stop-color="#FFD700" />
-                  <stop offset="0.505033" stop-color="#B8860B" />
-                  <stop offset="0.749821" stop-color="#DCB900" />
-                  <stop offset="1" stop-color="#B8860B" />
+                  <stop offset="0.03125" stopColor="#B8860B" />
+                  <stop offset="0.235169" stopColor="#FFD700" />
+                  <stop offset="0.505033" stopColor="#B8860B" />
+                  <stop offset="0.749821" stopColor="#DCB900" />
+                  <stop offset="1" stopColor="#B8860B" />
                 </linearGradient>
               </defs>
             </svg>
