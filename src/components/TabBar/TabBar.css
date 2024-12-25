@@ -23,17 +23,12 @@
   color: #fff;
 }
 
-.navIconWrapper {
-  margin-bottom: 5px;
-}
-
 .navIcon {
   width: 24px;
   height: 24px;
 }
 
 .navLabel {
-  margin-top: 4px;
   font-size: 15px;
   font-weight: 500;
   color: #a2acb0;

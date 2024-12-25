@@ -143,9 +143,9 @@ body {
 }
 
 .chatImage {
-  width: 23px; /* Установите ширину изображения */
-  height: auto; /* Высота будет рассчитываться автоматически */
-  margin-top: 8px; /* Отступ сверху для лучшего выравнивания */
+  width: 23px;
+  height: auto;
+  margin-top: 8px;
 }
 
 .footer {
