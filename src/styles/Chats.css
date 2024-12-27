@@ -79,7 +79,7 @@ body {
   font-weight: bold;
   line-height: 1;
   line-height: 24px;
-  /* transform: translateY(-1px); */
+  transform: translateY(-1px);
 }
 
 .chatList {
@@ -152,7 +152,7 @@ body {
   display: flex;
   align-items: center;
   position: fixed;
-  bottom: 80px;
+  bottom: 7%;
   left: 0;
   width: 100%;
   padding: 10px;

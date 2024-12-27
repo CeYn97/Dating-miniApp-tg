@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import Chats from "./Chat";
+import Chats from "./Chats";
 import Profile from "./Profile";
 import Subscribe from "./Subscribe"; 
 import "../styles/App.css";

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../styles/Profile.css";
 import "../styles/reset.css";
 import profileAvatar from "../assets/ProfileAvatar.svg";
+import arrow from "../assets/arrow.png";
+import calendar from "../assets/calendar.svg";
 const ProfilePage: React.FC = () => {
   const [hideAge, setHideAge] = useState(false);
 
@@ -18,7 +20,8 @@ const ProfilePage: React.FC = () => {
           </div>
           <h1 className="profile-name">Виктория Чурикова</h1>
           <p className="profile-info">
-            Девушка <div className="dot"></div> {hideAge ? "Возраст скрыт" : "29 лет"}
+            Девушка <div className="dot"></div>{" "}
+            {hideAge ? "Возраст скрыт" : "29 лет"}
           </p>
         </header>
 
@@ -36,29 +39,33 @@ const ProfilePage: React.FC = () => {
           </div>
 
           <div className="input-group">
-            <input
-              type="text"
-              id="gender"
-              className="floating-input"
-              defaultValue="Женский"
-            />
-            <label htmlFor="gender" className="floating-label">
-              ПОЛ
-            </label>
+            <div className="input-wrapper">
+              <input
+                type="text"
+                id="gender"
+                className="floating-input"
+                defaultValue="Женский"
+              />
+              <img src={arrow} alt="arrow" className="input-icon" />
+              <label htmlFor="gender" className="floating-label">
+                ПОЛ
+              </label>
+            </div>
           </div>
-
           <div className="input-group">
-            <input
-              type="text"
-              id="birthdate"
-              className="floating-input"
-              defaultValue="23.09.1995"
-            />
-            <label htmlFor="birthdate" className="floating-label">
-              ДАТА РОЖДЕНИЯ
-            </label>
+            <div className="input-wrapper">
+              <input
+                type="text"
+                id="birthdate"
+                className="floating-input"
+                defaultValue="23.09.1995"
+              />
+              <img src={calendar} alt="calendar" className="input-icon" />
+              <label htmlFor="birthdate" className="floating-label">
+                ДАТА РОЖДЕНИЯ
+              </label>
+            </div>
           </div>
-
           <div className="input-group">
             <div className="toggle-container">
               <span className="toggle-label">СКРЫВАТЬ ВОЗРАСТ</span>
