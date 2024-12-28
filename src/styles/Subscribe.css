@@ -72,28 +72,37 @@
   justify-content: center;
 }
 
-.subscription-card {
-  background-color: #222;
+/* .subscription-card {
+  background-color: #262628;
   text-align: center;
   width: 280px;
   position: relative;
   padding: 48px 20px;
-  border-radius: 10px;
+  border-radius: 9.37px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+} */
+
+.subscription-card {
+  background-color: #262628;
+  text-align: center;
+  width: 280px;
+  position: relative;
+  padding: 48px 20px;
+  border-radius: 9.37px;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.subscription-card.active {
+.subscription-card * {
+  margin: 0; /* Убираем внешние отступы у вложенных элементов */
+  padding: 0; /* Убираем внутренние отступы */
+}
+
+/* .subscription-card.active::before {
   border: 3px solid #ffd700;
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-}
-
-.subscription-card:hover {
-  transform: scale(1.02);
-}
-
-.subscription-card::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -109,7 +118,48 @@
   );
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
+} */
+
+.subscription-card.active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9.37px;
+  border: 1px solid transparent; /* Измените, если нужно */
+  padding: 2px; /* Избегайте перекрытия границ */
+  background-image: linear-gradient(
+    90deg,
+    rgba(184, 134, 11, 1) 0%,
+    rgba(255, 215, 0, 1) 25%,
+    rgba(184, 134, 11, 1) 50%,
+    rgba(220, 185, 0, 1) 75%,
+    rgba(184, 134, 11, 1) 100%
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
 }
+
+.subscription-card:hover {
+  transform: scale(1.02);
+}
+
+/* .subscription-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9.37px;
+  padding: 2px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(184, 134, 11, 1) 0%,
+    rgba(255, 215, 0, 1) 25%,
+    rgba(184, 134, 11, 1) 50%,
+    rgba(220, 185, 0, 1) 75%,
+    rgba(184, 134, 11, 1) 100%
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+} */
 
 .subscription-card h2 {
   font-family: "Lighthaus", sans-serif;

@@ -56,7 +56,7 @@ const Subscribe: React.FC = () => {
       </header>
       <div className="subscription-options">
         <Swiper
-          spaceBetween={20}
+          spaceBetween={21}
           slidesPerView={1.5} 
           centeredSlides={true}
           onSlideChange={handleSlideChange}

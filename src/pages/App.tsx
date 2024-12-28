@@ -5,7 +5,7 @@ import Profile from "./Profile";
 import Subscribe from "./Subscribe"; 
 import "../styles/App.css";
 import "../styles/reset.css";
-import mainLogo from "../assets/mainLogo.svg";
+import mainLogo from "../assets/mainLogo.png";
 import TabBar from "../components/TabBar/TabBar";
 
 const Home: React.FC = () => {
