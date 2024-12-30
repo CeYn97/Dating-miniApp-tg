@@ -72,17 +72,6 @@
   justify-content: center;
 }
 
-/* .subscription-card {
-  background-color: #262628;
-  text-align: center;
-  width: 280px;
-  position: relative;
-  padding: 48px 20px;
-  border-radius: 9.37px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-} */
-
 .subscription-card {
   background-color: #262628;
   text-align: center;
@@ -95,59 +84,16 @@
 }
 
 .subscription-card * {
-  margin: 0; /* Убираем внешние отступы у вложенных элементов */
-  padding: 0; /* Убираем внутренние отступы */
+  margin: 0;
+  padding: 0;
 }
-
-/* .subscription-card.active::before {
-  border: 3px solid #ffd700;
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 9.37px;
-  padding: 2px;
-  background-image: linear-gradient(
-    90deg,
-    rgba(184, 134, 11, 1) 0%,
-    rgba(255, 215, 0, 1) 25%,
-    rgba(184, 134, 11, 1) 50%,
-    rgba(220, 185, 0, 1) 75%,
-    rgba(184, 134, 11, 1) 100%
-  );
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
-} */
 
 .subscription-card.active::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 9.37px;
-  border: 1px solid transparent; /* Измените, если нужно */
-  padding: 2px; /* Избегайте перекрытия границ */
-  background-image: linear-gradient(
-    90deg,
-    rgba(184, 134, 11, 1) 0%,
-    rgba(255, 215, 0, 1) 25%,
-    rgba(184, 134, 11, 1) 50%,
-    rgba(220, 185, 0, 1) 75%,
-    rgba(184, 134, 11, 1) 100%
-  );
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
-}
-
-.subscription-card:hover {
-  transform: scale(1.02);
-}
-
-/* .subscription-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 9.37px;
+  border: 1px solid transparent;
   padding: 2px;
   background-image: linear-gradient(
     90deg,
@@ -159,7 +105,11 @@
   );
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
-} */
+}
+
+.subscription-card.active {
+  transform: scale(1.05);
+}
 
 .subscription-card h2 {
   font-family: "Lighthaus", sans-serif;
@@ -182,7 +132,7 @@
     )
     1;
   margin: 0 40.5px 10px;
-  color: #c8a53d;
+  color: #ffffff;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -241,4 +191,31 @@
   display: flex;
   justify-content: center;
   transition: transform 0.3s ease;
+}
+
+.special-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.special-card .description,
+.special-card .price,
+.special-card .renew-button {
+  margin-top: auto;
+}
+
+.subscription-card.special-card h2 {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+      90deg,
+      #b8860b 0%,
+      #ffd700 25%,
+      #b8860b 50%,
+      #dcb900 75%,
+      #b8860b 100%
+    )
+    1;
+  padding-bottom: 7.49px;
 }
