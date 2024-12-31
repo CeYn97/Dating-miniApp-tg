@@ -20,7 +20,7 @@ const ProfilePage: React.FC = () => {
           </div>
           <h1 className="profile-name">Виктория Чурикова</h1>
           <p className="profile-info">
-            Девушка <div className="dot"></div>{" "}
+            Девушка <span className="dot"></span>{""}
             {hideAge ? "Возраст скрыт" : "29 лет"}
           </p>
         </header>

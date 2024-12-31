@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Chats.css";
 import "../styles/reset.css";
 import searchIcon from "../assets/SearchIcon.svg";
@@ -7,21 +8,23 @@ import secondAvatar from "../assets/Avatar2.svg";
 import thridAvatar from "../assets/Avatat3.svg";
 import someChatImage from "../assets/someChatIcon.svg";
 
-
 const chats = [
   {
+    id: 1,
     name: "Сергей",
     lastMessage: "Мне нравится, когда ты говори...",
     time: "13:50",
     avatar: firstAvatar,
   },
   {
+    id: 2,
     name: "Александр Петров",
     lastMessage: "Если говорить честно, то я не ...",
     time: "11:01",
     avatar: secondAvatar,
   },
   {
+    id: 3,
     name: "Артём Васильев",
     lastMessage: "Какой областью своей жизни...",
     time: "09:17",
@@ -30,6 +33,12 @@ const chats = [
 ];
 
 const ChatListScreen: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleChatClick = (chatId: number) => {
+    navigate(`/chat/${chatId}`);
+  };
+
   return (
     <div className="container">
       <header className="searchBarContainer">
@@ -43,8 +52,12 @@ const ChatListScreen: React.FC = () => {
       </header>
 
       <main className="chatList">
-        {chats.map((chat, index) => (
-          <div key={index} className="chatItem">
+        {chats.map((chat) => (
+          <div
+            key={chat.id}
+            className="chatItem"
+            onClick={() => handleChatClick(chat.id)}
+          >
             <div className="avatar">
               <img src={chat.avatar} alt={chat.name} className="avatarImage" />
             </div>
@@ -61,7 +74,9 @@ const ChatListScreen: React.FC = () => {
       </main>
 
       <div className="footer">
-        <button className="inviteButton"><span className="inviteText">Пригласить нового игрока</span></button>
+        <button className="inviteButton">
+          <span className="inviteText">Пригласить нового игрока</span>
+        </button>
       </div>
     </div>
   );
