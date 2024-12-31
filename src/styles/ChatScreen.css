@@ -11,6 +11,7 @@
   height: calc(100vh - 85px);
   background-color: #0e0e10;
   overflow-y: auto;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .first-question__card {

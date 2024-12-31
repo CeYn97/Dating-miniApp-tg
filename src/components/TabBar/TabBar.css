@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: center;
   background-color: #0e0e10;
-  padding: 10px 0;
+  padding-top: 10px;
   position: fixed;
   left: 0;
   right: 0;
@@ -11,6 +11,7 @@
   width: 100%;
   font-size: 12px;
   border-top: 1px solid #333;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
 }
 
 .navItem {
