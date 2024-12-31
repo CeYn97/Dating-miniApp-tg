@@ -81,6 +81,7 @@ const ChatScreen: React.FC = () => {
         <div className="wrapper-input">
           <input
             type="text"
+            id="text-input"
             className="text-input"
             placeholder="Напиши ответ)"
           />
