@@ -86,7 +86,7 @@ const ChatScreen: React.FC = () => {
             placeholder="Напиши ответ)"
           />
           <button className="send-button">
-            <img src={sendButton} alt="Отправить" className="sendButton" />
+            {/* <img src={sendButton} alt="Отправить" className="sendButton" /> */}
           </button>
         </div>
         <div className="drop-button">
