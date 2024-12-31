@@ -388,10 +388,10 @@
   );
 }
 
-.message-block {
-  flex: 1; /* Позволяет занять оставшееся пространство */
-  padding: 16px; /* Для отступов */
-}
+/* .message-block {
+  flex: 1;
+  padding: 16px;
+} */
 
 .received-message {
   margin: 0 18px 20px 31px;
@@ -537,10 +537,11 @@
 }
 
 .input-container {
+  flex: 1;
   display: flex;
   align-items: center;
   position: sticky;
-  bottom: 10%;
+  bottom: 3%;
   left: 0;
   width: 100%;
   z-index: 10;
