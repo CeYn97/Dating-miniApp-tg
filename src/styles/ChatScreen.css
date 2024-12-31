@@ -537,11 +537,10 @@
 }
 
 .input-container {
-  flex: 1;
   display: flex;
   align-items: center;
   position: sticky;
-  bottom: 3%;
+  bottom: 10%;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -560,6 +559,7 @@
 .text-input {
   padding: 14.5px 0 14.5px 11px;
   background: none;
+  color: #fff !important;
 }
 
 .text-input::placeholder {
