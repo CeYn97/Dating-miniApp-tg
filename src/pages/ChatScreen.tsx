@@ -77,40 +77,6 @@ const ChatScreen: React.FC = () => {
         </div>
       </div>
 
-      <div className="second-question__card">
-        <div className="wrapper-second__question">
-          <p className="second-question__text">
-            Какие мои слова или <br /> действия тебя заводят ?
-          </p>
-          <div className="question-footer">
-            <div className="question-number">
-              <img src={leftCartLogo} alt="leftCartLogo" />
-              <div className="second-number__circle">
-                <span>22</span>
-              </div>
-              <img src={rightCartLogo} alt="rightCartLogo" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="second-question__card">
-        <div className="wrapper-second__question">
-          <p className="second-question__text">
-            Какие мои слова или <br /> действия тебя заводят ?
-          </p>
-          <div className="question-footer">
-            <div className="question-number">
-              <img src={leftCartLogo} alt="leftCartLogo" />
-              <div className="second-number__circle">
-                <span>22</span>
-              </div>
-              <img src={rightCartLogo} alt="rightCartLogo" />
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="input-container">
         <div className="wrapper-input">
           <input
