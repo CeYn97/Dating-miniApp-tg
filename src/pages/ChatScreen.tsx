@@ -5,7 +5,7 @@ import firstAvatar from "../assets/Avatar1.svg";
 import leftCartLogo from "../assets/leftSideCartLogo.svg";
 import rightCartLogo from "../assets/rightSideCartLogo.svg";
 import viewStatus from "../assets/View-status.svg";
-// import sendButton from "../assets/sendButton.svg";
+import sendMessagedButton from "../assets/SendButton.svg";
 import dropNewCart from "../assets/dropCartButton.svg";
 
 const ChatScreen: React.FC = () => {
@@ -86,7 +86,11 @@ const ChatScreen: React.FC = () => {
             placeholder="Напиши ответ)"
           />
           <button className="send-button">
-            {/* <img src={sendButton} alt="Отправить" className="sendButton" /> */}
+            <img
+              src={sendMessagedButton}
+              alt="Отправить"
+              className="sendButton"
+            />
           </button>
         </div>
         <div className="drop-button">
