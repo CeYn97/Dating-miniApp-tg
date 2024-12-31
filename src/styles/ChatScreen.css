@@ -307,6 +307,7 @@
   height: 100vh;
   background-color: #0e0e10;
   overflow-y: auto; /* Скрывает лишнее содержимое */
+  padding-bottom: 10%;
 }
 
 .first-question__card {
@@ -540,7 +541,7 @@
   display: flex;
   align-items: center;
   position: sticky;
-  bottom: 10%;
+  bottom: 7%;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -559,7 +560,7 @@
 .text-input {
   padding: 14.5px 0 14.5px 11px;
   background: none;
-  color: #fff !important;
+  color: #fff;
 }
 
 .text-input::placeholder {
