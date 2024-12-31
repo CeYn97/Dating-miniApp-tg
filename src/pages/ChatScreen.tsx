@@ -5,7 +5,7 @@ import firstAvatar from "../assets/Avatar1.svg";
 import leftCartLogo from "../assets/leftSideCartLogo.svg";
 import rightCartLogo from "../assets/rightSideCartLogo.svg";
 import viewStatus from "../assets/View-status.svg";
-import sendButton from "../assets/sendButton.svg";
+// import sendButton from "../assets/sendButton.svg";
 import dropNewCart from "../assets/dropCartButton.svg";
 
 const ChatScreen: React.FC = () => {
