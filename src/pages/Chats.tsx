@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Chats.css";
 import "../styles/reset.css";
 import searchIcon from "../assets/SearchIcon.svg";
-import firstAvatar from "../assets/Avatar1.svg";
-import secondAvatar from "../assets/Avatar2.svg";
-import thridAvatar from "../assets/Avatat3.svg";
+import firstAvatar from "../assets/firstAvatar.png";
+import secondAvatar from "../assets/secondAvatar.png";
+import thirdAvatar from "../assets/thirdAvatar.png";
 import someChatImage from "../assets/someChatIcon.svg";
 
 const chats = [
@@ -28,7 +28,7 @@ const chats = [
     name: "Артём Васильев",
     lastMessage: "Какой областью своей жизни...",
     time: "09:17",
-    avatar: thridAvatar,
+    avatar: thirdAvatar,
   },
 ];
 

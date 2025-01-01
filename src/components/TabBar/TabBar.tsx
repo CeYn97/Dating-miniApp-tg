@@ -1,14 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, matchPath } from "react-router-dom";
 import "./TabBar.css";
 
 export default function TabBar() {
+  const location = useLocation();
+
+  const isChatsActive =
+    matchPath("/chats", location.pathname) ||
+    matchPath("/chat/:chatId", location.pathname);
   return (
     <nav className="bottomNavigation">
       <div className="navItem">
         <NavLink
-          className={({ isActive }) =>
-            isActive ? "navLink active" : "navLink"
-          }
+          className={isChatsActive ? "navLink active" : "navLink"}
           to="/chats"
         >
           <div className="navIconWrapper">
