@@ -83,7 +83,7 @@ const ChatScreen: React.FC = () => {
             type="text"
             id="text-input"
             className="text-input"
-            placeholder="Напиши ответ)"
+            placeholder="Напиши ответ)))"
           />
           <button className="send-button">
             <img
