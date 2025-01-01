@@ -240,7 +240,8 @@
   align-items: center;
   width: 94%;
   margin-left: 12px;
-  margin-top: 5%;
+  margin-top: auto;
+  margin-bottom: 4.65%;
 }
 
 .wrapper-input {
