@@ -6,6 +6,7 @@ import "../styles/Subscribe.css";
 interface SubscriptionPlan {
   id: number;
   title: string;
+  subscribeInfo: string;
   duration: string;
   description: string;
   price: string;
@@ -17,6 +18,7 @@ const Subscribe: React.FC = () => {
   const subscriptionPlans: SubscriptionPlan[] = [
     {
       id: 1,
+      subscribeInfo: " У тебя активна подписка БЕЗЛИМИТ до 29.12",
       title: "БЕЗЛИМИТ",
       duration: "на 1 месяц",
       description:
@@ -25,6 +27,7 @@ const Subscribe: React.FC = () => {
     },
     {
       id: 2,
+      subscribeInfo: "У тебя осталось 15 карточек",
       title: "10 КАРТОЧЕК",
       duration: "",
       description: "10 карточек с вопросами для свиданий",
@@ -32,11 +35,13 @@ const Subscribe: React.FC = () => {
     },
     {
       id: 3,
+      subscribeInfo: " У тебя активна подписка БЕЗЛИМИТ на 3 месяца",
       title: "БЕЗЛИМИТ",
       duration: "на 3 месяца",
-      description: "Безлимитное количество карточек с вопросами для свиданий на 1 месяц",
+      description:
+        "Безлимитное количество карточек с вопросами для свиданий на 1 месяц",
       price: "5000 ₽",
-    }
+    },
   ];
 
   const handleSlideChange = (swiper: any) => {
@@ -47,9 +52,7 @@ const Subscribe: React.FC = () => {
     <div className="subscription-page">
       <header className="subscription-header">
         <h1>подписка</h1>
-        <p>
-          У тебя активна подписка "БЕЗЛИМИТ" <br /> до 29.12
-        </p>
+        <p>{subscriptionPlans[activeIndex]?.subscribeInfo}</p>
       </header>
       <div className="subscription-options">
         <Swiper
@@ -67,9 +70,7 @@ const Subscribe: React.FC = () => {
                 } ${plan.id === 2 ? "special-card" : ""}`}
               >
                 <h2>{plan.title}</h2>
-                {plan.duration && (
-                  <p className="duration">{plan.duration}</p>
-                )}
+                {plan.duration && <p className="duration">{plan.duration}</p>}
                 <p className="description">{plan.description}</p>
                 <p className="price">{plan.price}</p>
                 <button className="renew-button">Продлить</button>
