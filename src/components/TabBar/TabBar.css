@@ -7,11 +7,10 @@
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 20px;
+  bottom: 0;
   width: 100%;
   font-size: 12px;
   border-top: 1px solid #333;
-  padding-bottom: calc(10px + env(safe-area-inset-bottom));
 }
 
 .navItem {
