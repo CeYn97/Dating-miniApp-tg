@@ -285,7 +285,7 @@ body {
 }
 
 .profileWrapper {
-  margin-top: 65%;
+  margin-top: auto;
   margin-bottom: calc(env(safe-area-inset-bottom, 0px));
 }
 
