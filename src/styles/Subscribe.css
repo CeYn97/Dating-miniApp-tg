@@ -12,6 +12,19 @@
   font-style: normal;
 }
 
+.container-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.profileWrapper {
+  margin-top: auto;
+  margin-bottom: calc(env(safe-area-inset-bottom, 0px));
+}
+
 .subscription-page {
   display: flex;
   flex-direction: column;
@@ -20,7 +33,6 @@
   min-height: 100vh;
   box-sizing: border-box;
   background-color: #0e0e10;
-  overflow-y: scroll;
 }
 
 .subscription-header {
