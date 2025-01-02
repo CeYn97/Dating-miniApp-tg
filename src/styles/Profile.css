@@ -254,7 +254,7 @@ body {
   transform: translateX(20px);
 } */
 
-/* @font-face {
+@font-face {
   font-family: "Lighthaus";
   src: url("../assets/fonts/ofont.ru_Lighthaus.ttf") format("truetype");
   font-weight: normal;
@@ -286,7 +286,7 @@ body {
 }
 
 .profileWrapper {
-  margin-top: auto;
+  margin-top: 65%;
   margin-bottom: calc(env(safe-area-inset-bottom, 0px));
 }
 
@@ -509,9 +509,9 @@ body {
 
 .toggle-switch input:checked + .slider:before {
   transform: translateX(20px);
-} */
+}
 
-@font-face {
+/* @font-face {
   font-family: "Lighthaus";
   src: url("../assets/fonts/ofont.ru_Lighthaus.ttf") format("truetype");
   font-weight: normal;
@@ -766,4 +766,4 @@ body {
 
 .toggle-switch input:checked + .slider:before {
   transform: translateX(20px);
-}
+} */
