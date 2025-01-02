@@ -5,7 +5,6 @@
 // import arrow from "../assets/arrow.png";
 // import calendar from "../assets/calendar.svg";
 // const ProfilePage: React.FC = () => {
-
 //   const [hideAge, setHideAge] = useState(false);
 
 //   const toggleHideAge = () => {
