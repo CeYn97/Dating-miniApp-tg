@@ -20,7 +20,7 @@
   min-height: 100vh;
   box-sizing: border-box;
   background-color: #0e0e10;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .subscription-header {
