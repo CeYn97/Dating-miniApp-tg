@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Lighthaus";
   src: url("../assets/fonts/ofont.ru_Lighthaus.ttf") format("truetype");
   font-weight: normal;
@@ -152,6 +152,520 @@ body {
   height: 56px;
   box-sizing: border-box;
   line-height: 36px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.floating-input:focus {
+  border-color: #d1a832;
+}
+
+.floating-label {
+  position: absolute;
+  left: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+  top: 10px;
+  padding: 10px 0 2px 0;
+  font-size: 10px;
+  color: #ffffff;
+  opacity: 50%;
+}
+
+.floating-input:focus + .floating-label,
+.floating-input:not(:placeholder-shown) + .floating-label {
+  top: 10px;
+  padding: 10px 0 2px 0;
+  font-size: 10px;
+  color: #ffffff;
+  opacity: 50%;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.toggle-label {
+  padding-left: 16px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 51px;
+  height: 30px;
+  margin-right: 14px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #d1a832, #fff);
+  transition: 0.4s;
+  border-radius: 22px;
+}
+
+.toggle-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.toggle-switch input:checked + .slider {
+  background-image: linear-gradient(
+    90deg,
+    rgba(184, 134, 11, 1) 0%,
+    rgba(255, 215, 0, 1) 25%,
+    rgba(184, 134, 11, 1) 50%,
+    rgba(220, 185, 0, 1) 75%,
+    rgba(184, 134, 11, 1) 100%
+  );
+}
+
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(20px);
+} */
+
+/* @font-face {
+  font-family: "Lighthaus";
+  src: url("../assets/fonts/ofont.ru_Lighthaus.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0e0e10;
+  color: #fff;
+}
+
+.container-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.profileWrapper {
+  margin-top: auto;
+  margin-bottom: calc(env(safe-area-inset-bottom, 0px));
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  flex-grow: 1;
+  padding: 0 16px;
+}
+
+.avatar-container {
+  position: relative;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.profile-name {
+  font-family: "Lighthaus", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 20px 47px 6px;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+      90deg,
+      #b8860b 0%,
+      #ffd700 25%,
+      #b8860b 50%,
+      #dcb900 75%,
+      #b8860b 100%
+    )
+    1;
+  padding-bottom: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  gap: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(184, 134, 11, 1) 0%,
+    rgba(255, 215, 0, 1) 25%,
+    rgba(184, 134, 11, 1) 50%,
+    rgba(220, 185, 0, 1) 75%,
+    rgba(184, 134, 11, 1) 100%
+  );
+  border-radius: 50%;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.last-input {
+  position: relative;
+}
+
+.floating-input {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  padding: 26px 0 10px 16px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  outline: none;
+  height: 56px;
+  box-sizing: border-box;
+  line-height: 36px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.floating-input:focus {
+  border-color: #d1a832;
+}
+
+.floating-label {
+  position: absolute;
+  left: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+  top: 10px;
+  padding: 10px 0 2px 0;
+  font-size: 10px;
+  color: #ffffff;
+  opacity: 50%;
+}
+
+.floating-input:focus + .floating-label,
+.floating-input:not(:placeholder-shown) + .floating-label {
+  top: 10px;
+  padding: 10px 0 2px 0;
+  font-size: 10px;
+  color: #ffffff;
+  opacity: 50%;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.toggle-label {
+  padding-left: 16px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 51px;
+  height: 30px;
+  margin-right: 14px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #d1a832, #fff);
+  transition: 0.4s;
+  border-radius: 22px;
+}
+
+.toggle-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.toggle-switch input:checked + .slider {
+  background-image: linear-gradient(
+    90deg,
+    rgba(184, 134, 11, 1) 0%,
+    rgba(255, 215, 0, 1) 25%,
+    rgba(184, 134, 11, 1) 50%,
+    rgba(220, 185, 0, 1) 75%,
+    rgba(184, 134, 11, 1) 100%
+  );
+}
+
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(20px);
+} */
+
+@font-face {
+  font-family: "Lighthaus";
+  src: url("../assets/fonts/ofont.ru_Lighthaus.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0e0e10;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  flex-grow: 1;
+  padding: 0 16px;
+}
+
+.avatar-container {
+  position: relative;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+}
+
+.profileWrapper {
+  margin-top: auto;
+  margin-bottom: calc(100px);
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.profile-name {
+  font-family: "Lighthaus", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 20px 47px 6px;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+      90deg,
+      #b8860b 0%,
+      #ffd700 25%,
+      #b8860b 50%,
+      #dcb900 75%,
+      #b8860b 100%
+    )
+    1;
+  padding-bottom: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  gap: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(184, 134, 11, 1) 0%,
+    rgba(255, 215, 0, 1) 25%,
+    rgba(184, 134, 11, 1) 50%,
+    rgba(220, 185, 0, 1) 75%,
+    rgba(184, 134, 11, 1) 100%
+  );
+  border-radius: 50%;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.last-input {
+  position: relative;
+}
+
+.floating-input {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  padding: 26px 0 10px 16px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  outline: none;
+  height: 56px;
+  box-sizing: border-box;
   display: flex;
   align-items: flex-end;
 }
