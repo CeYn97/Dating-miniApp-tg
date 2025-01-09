@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Chats.css";
 import "../styles/reset.css";
-import searchIcon from "../assets/search-Icon.svg";
+import searchIcon from "../assets/searchIcon.svg";
 import firstAvatar from "../assets/firstAvatar.png";
 import secondAvatar from "../assets/secondAvatar.png";
 import thirdAvatar from "../assets/thirdAvatar.png";
