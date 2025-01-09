@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Profile.css";
 import "../styles/reset.css";
-import profileAvatar from "../assets/profileAvatar.svg";
+import profileAvatar from "../assets/profile-Avatar.svg";
 import arrow from "../assets/arrow.png";
 import calendar from "../assets/calendar.svg";
 
