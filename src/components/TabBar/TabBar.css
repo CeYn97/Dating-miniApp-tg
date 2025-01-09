@@ -11,6 +11,9 @@
   width: 100%;
   font-size: 12px;
   border-top: 1px solid #333;
+  z-index: 1000; /* Убедитесь, что панель поверх всех элементов */
+  /* Добавляем обработку iPhone при открытии клавиатуры */
+  padding-bottom: env(safe-area-inset-bottom, 16px);
 }
 
 .navItem {
