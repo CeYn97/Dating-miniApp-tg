@@ -1,3 +1,7 @@
+.bottomNavigation.keyboardVisible {
+  bottom: 0; /* При видимой клавиатуре */
+}
+
 .bottomNavigation {
   display: flex;
   justify-content: space-around;
@@ -7,7 +11,7 @@
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 2%;
+  bottom: 3%;
   width: 100%;
   font-size: 12px;
   border-top: 1px solid #333;

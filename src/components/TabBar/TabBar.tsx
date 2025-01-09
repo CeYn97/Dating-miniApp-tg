@@ -1,14 +1,35 @@
+import React, { useEffect, useState } from "react";
 import { NavLink, useLocation, matchPath } from "react-router-dom";
 import "./TabBar.css";
 
 export default function TabBar() {
   const location = useLocation();
+  const [isKeyboardVisible, setKeyboardVisible] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Определяем видимость клавиатуры по изменению высоты окна
+      const isKeyboardNowVisible =
+        window.innerHeight < document.documentElement.clientHeight * 0.8;
+      setKeyboardVisible(isKeyboardNowVisible);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const isChatsActive =
     matchPath("/chats", location.pathname) ||
     matchPath("/chat/:chatId", location.pathname);
   return (
-    <nav className="bottomNavigation">
+    <nav
+      className={`bottomNavigation ${
+        isKeyboardVisible ? "keyboardVisible" : ""
+      }`}
+    >
       <div className="navItem">
         <NavLink
           className={isChatsActive ? "navLink active" : "navLink"}
