@@ -78,7 +78,7 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 20.86px;
-  transform: translate(0.5px, 0.5px);
+  transform: translate(1px, 0.5px);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -221,7 +221,7 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 20.86px;
-  transform: translateY(1px);
+  transform: translateX(0.3px);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
