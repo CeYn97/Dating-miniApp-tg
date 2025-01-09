@@ -8,7 +8,6 @@ export default function TabBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Определяем видимость клавиатуры по изменению высоты окна
       const isKeyboardNowVisible =
         window.innerHeight < document.documentElement.clientHeight * 0.8;
       setKeyboardVisible(isKeyboardNowVisible);
