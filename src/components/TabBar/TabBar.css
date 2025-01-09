@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #0e0e10;
   padding-top: 10px;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 3%;
