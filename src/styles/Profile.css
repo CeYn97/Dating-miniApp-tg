@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
   font-family: "Lighthaus";
   src: url("../assets/fonts/ofont.ru_Lighthaus.ttf") format("truetype");
   font-weight: normal;
@@ -47,7 +47,7 @@ body {
 
 .profileWrapper {
   margin-top: auto;
-  margin-bottom: calc(67px);
+  margin-bottom: 50%;
 }
 
 .profile-avatar {
@@ -252,9 +252,9 @@ body {
 
 .toggle-switch input:checked + .slider:before {
   transform: translateX(20px);
-} */
+}
 
-@font-face {
+/* @font-face {
   font-family: "Lighthaus";
   src: url("../assets/fonts/ofont.ru_Lighthaus.ttf") format("truetype");
   font-weight: normal;
@@ -286,7 +286,7 @@ body {
 
 .profileWrapper {
   /* margin-top: auto; */
-  margin-bottom: calc(env(safe-area-inset-bottom, 0px));
+/* margin-bottom: calc(env(safe-area-inset-bottom, 0px));
 }
 
 .profile-header {
@@ -508,7 +508,7 @@ body {
 
 .toggle-switch input:checked + .slider:before {
   transform: translateX(20px);
-}
+} */
 
 /* @font-face {
   font-family: "Lighthaus";
