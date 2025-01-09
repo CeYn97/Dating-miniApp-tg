@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/Profile.css";
 import "../styles/reset.css";
 import profileAvatar from "../assets/profileAvatar.svg";
@@ -6,29 +6,11 @@ import arrow from "../assets/arrow.png";
 import calendar from "../assets/calendar.svg";
 
 const ProfilePage: React.FC = () => {
-  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [hideAge, setHideAge] = useState(false);
-
   const toggleHideAge = () => setHideAge(!hideAge);
 
-  useEffect(() => {
-    const updateViewportHeight = () => {
-      // Учитываем высоту окна для предотвращения появления отступов
-      setViewportHeight(window.innerHeight);
-    };
-
-    window.addEventListener("resize", updateViewportHeight);
-
-    return () => {
-      window.removeEventListener("resize", updateViewportHeight);
-    };
-  }, []);
-
   return (
-    <div
-      className="container-profile"
-      style={{ height: `${viewportHeight}px` }}
-    >
+    <div className="container-profile">
       <div className="profileWrapper">
         <header className="profile-header">
           <div className="avatar-container">
